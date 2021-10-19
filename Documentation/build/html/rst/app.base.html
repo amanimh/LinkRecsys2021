@@ -1,0 +1,691 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="fr" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>app.base package &mdash; Documentation LinkedInRecSys 0.9.0</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/translations.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Recherche" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> LinkedInRecSys
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.9.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Rechercher docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="Guide_Install.html">Guide D’installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api_param.html">Paramétres de L’API LinkedIn</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api_param.html#parametres-configparser">Paramétres ConfigParser</a></li>
+<li class="toctree-l1"><a class="reference internal" href="base.Local_functions.html">Scraping Function</a></li>
+<li class="toctree-l1"><a class="reference internal" href="base.routes.html">Dashbord</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">LinkedInRecSys</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>app.base package</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/rst/app.base.rst.txt" rel="nofollow"> Afficher la source de la page</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="app-base-package">
+<h1>app.base package<a class="headerlink" href="#app-base-package" title="Lien permanent vers ce titre">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Lien permanent vers ce titre">¶</a></h2>
+</div>
+<div class="section" id="module-app.base.Local_functions">
+<span id="app-base-local-functions-module"></span><h2>app.base.Local_functions module<a class="headerlink" href="#module-app.base.Local_functions" title="Lien permanent vers ce titre">¶</a></h2>
+<dl class="py class">
+<dt id="app.base.Local_functions.Scraping">
+<em class="property"><span class="pre">class</span> </em><code class="sig-name descname"><span class="pre">Scraping</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#app.base.Local_functions.Scraping" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Bases : <code class="xref py py-class docutils literal notranslate"><span class="pre">flask_wtf.form.FlaskForm</span></code></p>
+<p>Classe pour scrapper nettoyer et stocker les profils Linkedin</p>
+<dl class="py method">
+<dt id="app.base.Local_functions.Scraping.scraping_F">
+<code class="sig-name descname"><span class="pre">scraping_F</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">motcle</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#app.base.Local_functions.Scraping.scraping_F" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>scraping_F permet de récuperer tout les profils nécessaires pour alimenter notre BD
+en utilisant l’api Linkedin  en spécifiant un domaine bien déterminé comme entrée</p>
+<dl class="field-list">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>motcle (str)</strong> - pour spécifier la description du profil à chercher.</p>
+<p><strong>api (str)</strong> - permet d’accéder à l’API LinkedIn</p>
+</dd>
+<dt class="field-even">Return</dt>
+<dd class="field-even"><p>les tables Profil,Langues,Skills,Sociéte,Formation,Expérience et Certifications remplies dans la BD</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>table sql</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-app.base.forms">
+<span id="app-base-forms-module"></span><h2>app.base.forms module<a class="headerlink" href="#module-app.base.forms" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Copyright (c) 2019 - present AppSeed.us</p>
+<dl class="py class">
+<dt id="app.base.forms.CreateAccountForm">
+<em class="property"><span class="pre">class</span> </em><code class="sig-name descname"><span class="pre">CreateAccountForm</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#app.base.forms.CreateAccountForm" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Bases : <code class="xref py py-class docutils literal notranslate"><span class="pre">flask_wtf.form.FlaskForm</span></code></p>
+<dl class="py attribute">
+<dt id="app.base.forms.CreateAccountForm.email">
+<code class="sig-name descname"><span class="pre">email</span></code><em class="property"> <span class="pre">=</span> <span class="pre">&lt;UnboundField(TextField,</span> <span class="pre">('Email',),</span> <span class="pre">{'id':</span> <span class="pre">'email_create',</span> <span class="pre">'validators':</span> <span class="pre">[&lt;wtforms.validators.DataRequired</span> <span class="pre">object&gt;,</span> <span class="pre">&lt;wtforms.validators.Email</span> <span class="pre">object&gt;]})&gt;</span></em><a class="headerlink" href="#app.base.forms.CreateAccountForm.email" title="Lien permanent vers cette définition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="app.base.forms.CreateAccountForm.password">
+<code class="sig-name descname"><span class="pre">password</span></code><em class="property"> <span class="pre">=</span> <span class="pre">&lt;UnboundField(PasswordField,</span> <span class="pre">('Password',),</span> <span class="pre">{'id':</span> <span class="pre">'pwd_create',</span> <span class="pre">'validators':</span> <span class="pre">[&lt;wtforms.validators.DataRequired</span> <span class="pre">object&gt;]})&gt;</span></em><a class="headerlink" href="#app.base.forms.CreateAccountForm.password" title="Lien permanent vers cette définition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="app.base.forms.CreateAccountForm.pic">
+<code class="sig-name descname"><span class="pre">pic</span></code><em class="property"> <span class="pre">=</span> <span class="pre">&lt;UnboundField(TextField,</span> <span class="pre">('image',),</span> <span class="pre">{'id':</span> <span class="pre">'image_create',</span> <span class="pre">'validators':</span> <span class="pre">[&lt;wtforms.validators.DataRequired</span> <span class="pre">object&gt;]})&gt;</span></em><a class="headerlink" href="#app.base.forms.CreateAccountForm.pic" title="Lien permanent vers cette définition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="app.base.forms.CreateAccountForm.poste">
+<code class="sig-name descname"><span class="pre">poste</span></code><em class="property"> <span class="pre">=</span> <span class="pre">&lt;UnboundField(SelectField,</span> <span class="pre">('poste',),</span> <span class="pre">{'id':</span> <span class="pre">'poste_create',</span> <span class="pre">'choices':</span> <span class="pre">[('admin',</span> <span class="pre">'Administrateur'),</span> <span class="pre">('Talaq',</span> <span class="pre">'Talent</span> <span class="pre">acquisition')]})&gt;</span></em><a class="headerlink" href="#app.base.forms.CreateAccountForm.poste" title="Lien permanent vers cette définition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="app.base.forms.CreateAccountForm.remember">
+<code class="sig-name descname"><span class="pre">remember</span></code><em class="property"> <span class="pre">=</span> <span class="pre">&lt;UnboundField(BooleanField,</span> <span class="pre">('Remember</span> <span class="pre">Me',),</span> <span class="pre">{})&gt;</span></em><a class="headerlink" href="#app.base.forms.CreateAccountForm.remember" title="Lien permanent vers cette définition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="app.base.forms.CreateAccountForm.submit">
+<code class="sig-name descname"><span class="pre">submit</span></code><em class="property"> <span class="pre">=</span> <span class="pre">&lt;UnboundField(SubmitField,</span> <span class="pre">('Login',),</span> <span class="pre">{})&gt;</span></em><a class="headerlink" href="#app.base.forms.CreateAccountForm.submit" title="Lien permanent vers cette définition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="app.base.forms.CreateAccountForm.username">
+<code class="sig-name descname"><span class="pre">username</span></code><em class="property"> <span class="pre">=</span> <span class="pre">&lt;UnboundField(TextField,</span> <span class="pre">('Username',),</span> <span class="pre">{'id':</span> <span class="pre">'username_create',</span> <span class="pre">'validators':</span> <span class="pre">[&lt;wtforms.validators.DataRequired</span> <span class="pre">object&gt;,</span> <span class="pre">&lt;wtforms.validators.Length</span> <span class="pre">object&gt;]})&gt;</span></em><a class="headerlink" href="#app.base.forms.CreateAccountForm.username" title="Lien permanent vers cette définition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="app.base.forms.CreateAccountForm.validate_email">
+<code class="sig-name descname"><span class="pre">validate_email</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">email</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#app.base.forms.CreateAccountForm.validate_email" title="Lien permanent vers cette définition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="app.base.forms.CreateAccountForm.validate_username">
+<code class="sig-name descname"><span class="pre">validate_username</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">username</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#app.base.forms.CreateAccountForm.validate_username" title="Lien permanent vers cette définition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="app.base.forms.LoginForm">
+<em class="property"><span class="pre">class</span> </em><code class="sig-name descname"><span class="pre">LoginForm</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#app.base.forms.LoginForm" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Bases : <code class="xref py py-class docutils literal notranslate"><span class="pre">flask_wtf.form.FlaskForm</span></code></p>
+<dl class="py attribute">
+<dt id="app.base.forms.LoginForm.password">
+<code class="sig-name descname"><span class="pre">password</span></code><em class="property"> <span class="pre">=</span> <span class="pre">&lt;UnboundField(PasswordField,</span> <span class="pre">('Password',),</span> <span class="pre">{'id':</span> <span class="pre">'pwd_login'})&gt;</span></em><a class="headerlink" href="#app.base.forms.LoginForm.password" title="Lien permanent vers cette définition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="app.base.forms.LoginForm.username">
+<code class="sig-name descname"><span class="pre">username</span></code><em class="property"> <span class="pre">=</span> <span class="pre">&lt;UnboundField(TextField,</span> <span class="pre">('Username',),</span> <span class="pre">{'id':</span> <span class="pre">'username_login'})&gt;</span></em><a class="headerlink" href="#app.base.forms.LoginForm.username" title="Lien permanent vers cette définition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="app.base.forms.RequestResetForm">
+<em class="property"><span class="pre">class</span> </em><code class="sig-name descname"><span class="pre">RequestResetForm</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#app.base.forms.RequestResetForm" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Bases : <code class="xref py py-class docutils literal notranslate"><span class="pre">flask_wtf.form.FlaskForm</span></code></p>
+<dl class="py attribute">
+<dt id="app.base.forms.RequestResetForm.email">
+<code class="sig-name descname"><span class="pre">email</span></code><em class="property"> <span class="pre">=</span> <span class="pre">&lt;UnboundField(StringField,</span> <span class="pre">('Email',),</span> <span class="pre">{'validators':</span> <span class="pre">[&lt;wtforms.validators.DataRequired</span> <span class="pre">object&gt;,</span> <span class="pre">&lt;wtforms.validators.Email</span> <span class="pre">object&gt;]})&gt;</span></em><a class="headerlink" href="#app.base.forms.RequestResetForm.email" title="Lien permanent vers cette définition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="app.base.forms.RequestResetForm.submit">
+<code class="sig-name descname"><span class="pre">submit</span></code><em class="property"> <span class="pre">=</span> <span class="pre">&lt;UnboundField(SubmitField,</span> <span class="pre">('</span> <span class="pre">Réinitialiser</span> <span class="pre">',),</span> <span class="pre">{})&gt;</span></em><a class="headerlink" href="#app.base.forms.RequestResetForm.submit" title="Lien permanent vers cette définition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="app.base.forms.RequestResetForm.validate_email">
+<code class="sig-name descname"><span class="pre">validate_email</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">email</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#app.base.forms.RequestResetForm.validate_email" title="Lien permanent vers cette définition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="app.base.forms.ResetPasswordForm">
+<em class="property"><span class="pre">class</span> </em><code class="sig-name descname"><span class="pre">ResetPasswordForm</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#app.base.forms.ResetPasswordForm" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Bases : <code class="xref py py-class docutils literal notranslate"><span class="pre">flask_wtf.form.FlaskForm</span></code></p>
+<dl class="py attribute">
+<dt id="app.base.forms.ResetPasswordForm.confirm_password">
+<code class="sig-name descname"><span class="pre">confirm_password</span></code><em class="property"> <span class="pre">=</span> <span class="pre">&lt;UnboundField(PasswordField,</span> <span class="pre">('Confirm</span> <span class="pre">Password',),</span> <span class="pre">{'validators':</span> <span class="pre">[&lt;wtforms.validators.DataRequired</span> <span class="pre">object&gt;,</span> <span class="pre">&lt;wtforms.validators.EqualTo</span> <span class="pre">object&gt;]})&gt;</span></em><a class="headerlink" href="#app.base.forms.ResetPasswordForm.confirm_password" title="Lien permanent vers cette définition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="app.base.forms.ResetPasswordForm.password">
+<code class="sig-name descname"><span class="pre">password</span></code><em class="property"> <span class="pre">=</span> <span class="pre">&lt;UnboundField(PasswordField,</span> <span class="pre">('Password',),</span> <span class="pre">{'validators':</span> <span class="pre">[&lt;wtforms.validators.DataRequired</span> <span class="pre">object&gt;]})&gt;</span></em><a class="headerlink" href="#app.base.forms.ResetPasswordForm.password" title="Lien permanent vers cette définition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="app.base.forms.ResetPasswordForm.submit">
+<code class="sig-name descname"><span class="pre">submit</span></code><em class="property"> <span class="pre">=</span> <span class="pre">&lt;UnboundField(SubmitField,</span> <span class="pre">('Reset</span> <span class="pre">Password',),</span> <span class="pre">{})&gt;</span></em><a class="headerlink" href="#app.base.forms.ResetPasswordForm.submit" title="Lien permanent vers cette définition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="app.base.forms.UpdateAccountForm">
+<em class="property"><span class="pre">class</span> </em><code class="sig-name descname"><span class="pre">UpdateAccountForm</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#app.base.forms.UpdateAccountForm" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Bases : <code class="xref py py-class docutils literal notranslate"><span class="pre">flask_wtf.form.FlaskForm</span></code></p>
+<dl class="py attribute">
+<dt id="app.base.forms.UpdateAccountForm.confirm_password">
+<code class="sig-name descname"><span class="pre">confirm_password</span></code><em class="property"> <span class="pre">=</span> <span class="pre">&lt;UnboundField(PasswordField,</span> <span class="pre">('Password',),</span> <span class="pre">{'id':</span> <span class="pre">'confirm_password',</span> <span class="pre">'validators':</span> <span class="pre">[&lt;wtforms.validators.DataRequired</span> <span class="pre">object&gt;]})&gt;</span></em><a class="headerlink" href="#app.base.forms.UpdateAccountForm.confirm_password" title="Lien permanent vers cette définition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="app.base.forms.UpdateAccountForm.current_password">
+<code class="sig-name descname"><span class="pre">current_password</span></code><em class="property"> <span class="pre">=</span> <span class="pre">&lt;UnboundField(PasswordField,</span> <span class="pre">('Password',),</span> <span class="pre">{'id':</span> <span class="pre">'current_password',</span> <span class="pre">'validators':</span> <span class="pre">[&lt;wtforms.validators.DataRequired</span> <span class="pre">object&gt;]})&gt;</span></em><a class="headerlink" href="#app.base.forms.UpdateAccountForm.current_password" title="Lien permanent vers cette définition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="app.base.forms.UpdateAccountForm.email">
+<code class="sig-name descname"><span class="pre">email</span></code><em class="property"> <span class="pre">=</span> <span class="pre">&lt;UnboundField(TextField,</span> <span class="pre">('Email',),</span> <span class="pre">{'id':</span> <span class="pre">'email_create',</span> <span class="pre">'validators':</span> <span class="pre">[&lt;wtforms.validators.DataRequired</span> <span class="pre">object&gt;,</span> <span class="pre">&lt;wtforms.validators.Email</span> <span class="pre">object&gt;]})&gt;</span></em><a class="headerlink" href="#app.base.forms.UpdateAccountForm.email" title="Lien permanent vers cette définition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="app.base.forms.UpdateAccountForm.new_password">
+<code class="sig-name descname"><span class="pre">new_password</span></code><em class="property"> <span class="pre">=</span> <span class="pre">&lt;UnboundField(PasswordField,</span> <span class="pre">('Password',),</span> <span class="pre">{'id':</span> <span class="pre">'new_password',</span> <span class="pre">'validators':</span> <span class="pre">[&lt;wtforms.validators.DataRequired</span> <span class="pre">object&gt;]})&gt;</span></em><a class="headerlink" href="#app.base.forms.UpdateAccountForm.new_password" title="Lien permanent vers cette définition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="app.base.forms.UpdateAccountForm.submit">
+<code class="sig-name descname"><span class="pre">submit</span></code><em class="property"> <span class="pre">=</span> <span class="pre">&lt;UnboundField(SubmitField,</span> <span class="pre">('Modifier',),</span> <span class="pre">{})&gt;</span></em><a class="headerlink" href="#app.base.forms.UpdateAccountForm.submit" title="Lien permanent vers cette définition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="app.base.forms.UpdateAccountForm.username">
+<code class="sig-name descname"><span class="pre">username</span></code><em class="property"> <span class="pre">=</span> <span class="pre">&lt;UnboundField(TextField,</span> <span class="pre">('Username',),</span> <span class="pre">{'id':</span> <span class="pre">'username_create',</span> <span class="pre">'validators':</span> <span class="pre">[&lt;wtforms.validators.InputRequired</span> <span class="pre">object&gt;,</span> <span class="pre">&lt;wtforms.validators.Length</span> <span class="pre">object&gt;]})&gt;</span></em><a class="headerlink" href="#app.base.forms.UpdateAccountForm.username" title="Lien permanent vers cette définition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="app.base.forms.UpdateAccountForm.validate_email">
+<code class="sig-name descname"><span class="pre">validate_email</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">email</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#app.base.forms.UpdateAccountForm.validate_email" title="Lien permanent vers cette définition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="app.base.forms.UpdateAccountForm.validate_username">
+<code class="sig-name descname"><span class="pre">validate_username</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">username</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#app.base.forms.UpdateAccountForm.validate_username" title="Lien permanent vers cette définition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-app.base.models">
+<span id="app-base-models-module"></span><h2>app.base.models module<a class="headerlink" href="#module-app.base.models" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Copyright (c) 2019 - present AppSeed.us</p>
+<dl class="py class">
+<dt id="app.base.models.User">
+<em class="property"><span class="pre">class</span> </em><code class="sig-name descname"><span class="pre">User</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#app.base.models.User" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Bases : <code class="xref py py-class docutils literal notranslate"><span class="pre">sqlalchemy.orm.decl_api.Model</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">flask_login.mixins.UserMixin</span></code></p>
+<p>Classe contient les informtions de chaque utilisateur</p>
+<dl class="py attribute">
+<dt id="app.base.models.User.email">
+<code class="sig-name descname"><span class="pre">email</span></code><a class="headerlink" href="#app.base.models.User.email" title="Lien permanent vers cette définition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="app.base.models.User.get_reset_token">
+<code class="sig-name descname"><span class="pre">get_reset_token</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">expires_sec</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1800</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#app.base.models.User.get_reset_token" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><blockquote>
+<div><p>facilite la création des jetons</p>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><em>expires_sec (int)*</em> - combien de secondes avant l’expiration de jeton</p>
+</dd>
+<dt class="field-even">Return</dt>
+<dd class="field-even"><p>jeton crée</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="app.base.models.User.id">
+<code class="sig-name descname"><span class="pre">id</span></code><a class="headerlink" href="#app.base.models.User.id" title="Lien permanent vers cette définition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="app.base.models.User.image">
+<code class="sig-name descname"><span class="pre">image</span></code><a class="headerlink" href="#app.base.models.User.image" title="Lien permanent vers cette définition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="app.base.models.User.password">
+<code class="sig-name descname"><span class="pre">password</span></code><a class="headerlink" href="#app.base.models.User.password" title="Lien permanent vers cette définition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="app.base.models.User.poste">
+<code class="sig-name descname"><span class="pre">poste</span></code><a class="headerlink" href="#app.base.models.User.poste" title="Lien permanent vers cette définition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="app.base.models.User.username">
+<code class="sig-name descname"><span class="pre">username</span></code><a class="headerlink" href="#app.base.models.User.username" title="Lien permanent vers cette définition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="app.base.models.User.verify_reset_token">
+<em class="property"><span class="pre">static</span> </em><code class="sig-name descname"><span class="pre">verify_reset_token</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">token</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#app.base.models.User.verify_reset_token" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><blockquote>
+<div><p>Vérifier les jetons</p>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><em>token (str)*</em> -  jeton</p>
+</dd>
+<dt class="field-even">Return</dt>
+<dd class="field-even"><p>un utilisateur avec identifiant</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt id="app.base.models.request_loader">
+<code class="sig-name descname"><span class="pre">request_loader</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#app.base.models.request_loader" title="Lien permanent vers cette définition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt id="app.base.models.user_loader">
+<code class="sig-name descname"><span class="pre">user_loader</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">id</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#app.base.models.user_loader" title="Lien permanent vers cette définition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="module-app.base.routes">
+<span id="app-base-routes-module"></span><h2>app.base.routes module<a class="headerlink" href="#module-app.base.routes" title="Lien permanent vers ce titre">¶</a></h2>
+<dl class="py function">
+<dt id="app.base.routes.Display_profiletab">
+<code class="sig-name descname"><span class="pre">Display_profiletab</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#app.base.routes.Display_profiletab" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Affichage des information générale du profil de l’utilisateur connecté</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="app.base.routes.Pays">
+<code class="sig-name descname"><span class="pre">Pays</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#app.base.routes.Pays" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Afficher la distribution des profils sur la carte</p>
+<dl class="field-list simple">
+<dt class="field-odd">Output</dt>
+<dd class="field-odd"><p>Map</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="app.base.routes.Sc_Industries">
+<code class="sig-name descname"><span class="pre">Sc_Industries</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#app.base.routes.Sc_Industries" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Afficher le nombre des scociétés par secteur</p>
+<dl class="field-list simple">
+<dt class="field-odd">Output</dt>
+<dd class="field-odd"><p>Diagramme</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="app.base.routes.TotalProfil">
+<code class="sig-name descname"><span class="pre">TotalProfil</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#app.base.routes.TotalProfil" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Calcul des totaux</p>
+<dl class="field-list simple">
+<dt class="field-odd">Output</dt>
+<dd class="field-odd"><p>3 diagramme</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="app.base.routes.access_forbidden">
+<code class="sig-name descname"><span class="pre">access_forbidden</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">error</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#app.base.routes.access_forbidden" title="Lien permanent vers cette définition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt id="app.base.routes.connect">
+<code class="sig-name descname"><span class="pre">connect</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#app.base.routes.connect" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Accès aux bases de données SQLite;
+:utput: Profile dataframe contient les informations général d’un profil</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="app.base.routes.index">
+<code class="sig-name descname"><span class="pre">index</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#app.base.routes.index" title="Lien permanent vers cette définition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt id="app.base.routes.internal_error">
+<code class="sig-name descname"><span class="pre">internal_error</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">error</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#app.base.routes.internal_error" title="Lien permanent vers cette définition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt id="app.base.routes.login">
+<code class="sig-name descname"><span class="pre">login</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#app.base.routes.login" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Permet à chaque utilisateur d’accéder a son compte à travers son nom d’utilisateur et  mot de passe</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="app.base.routes.logout">
+<code class="sig-name descname"><span class="pre">logout</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#app.base.routes.logout" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Permet à un utilisateur de se déconnécter</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="app.base.routes.my_form">
+<code class="sig-name descname"><span class="pre">my_form</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#app.base.routes.my_form" title="Lien permanent vers cette définition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt id="app.base.routes.my_form_post">
+<code class="sig-name descname"><span class="pre">my_form_post</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#app.base.routes.my_form_post" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Permet d’afficher le formulaire de scrapping des donneés</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="app.base.routes.not_found_error">
+<code class="sig-name descname"><span class="pre">not_found_error</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">error</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#app.base.routes.not_found_error" title="Lien permanent vers cette définition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt id="app.base.routes.profil_anneexp">
+<code class="sig-name descname"><span class="pre">profil_anneexp</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#app.base.routes.profil_anneexp" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Afficher le nombre des profils par nombre d’années d’experience</p>
+<dl class="field-list simple">
+<dt class="field-odd">Output</dt>
+<dd class="field-odd"><p>Diagramme</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="app.base.routes.profil_ecole">
+<code class="sig-name descname"><span class="pre">profil_ecole</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#app.base.routes.profil_ecole" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Afficher le nombre des profils pour les 10 premiéres écoles</p>
+<dl class="field-list simple">
+<dt class="field-odd">Output</dt>
+<dd class="field-odd"><p>Diagramme</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="app.base.routes.profil_motcle">
+<code class="sig-name descname"><span class="pre">profil_motcle</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#app.base.routes.profil_motcle" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Afficher le nombre des profils par mots clés</p>
+<dl class="field-list simple">
+<dt class="field-odd">Output</dt>
+<dd class="field-odd"><p>Diagramme</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="app.base.routes.profil_skills">
+<code class="sig-name descname"><span class="pre">profil_skills</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#app.base.routes.profil_skills" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Afficher le nombre des profils par Comptétence</p>
+<dl class="field-list simple">
+<dt class="field-odd">Output</dt>
+<dd class="field-odd"><p>Diagramme</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="app.base.routes.register">
+<code class="sig-name descname"><span class="pre">register</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#app.base.routes.register" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Permet d’enregister un nouveau utilisateur</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="app.base.routes.reset_request">
+<code class="sig-name descname"><span class="pre">reset_request</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#app.base.routes.reset_request" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Pour demander une réinitialisation de mot de passe</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="app.base.routes.reset_token">
+<code class="sig-name descname"><span class="pre">reset_token</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">token</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#app.base.routes.reset_token" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>¨Permet réinitialiser le mot de passe avec le jeton actif</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="app.base.routes.route_default">
+<code class="sig-name descname"><span class="pre">route_default</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#app.base.routes.route_default" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Hash a password for storing.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="app.base.routes.send_reset_email">
+<code class="sig-name descname"><span class="pre">send_reset_email</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">user</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#app.base.routes.send_reset_email" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Permet d’envoyer le mail de réinitialisation</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="app.base.routes.unauthorized_handler">
+<code class="sig-name descname"><span class="pre">unauthorized_handler</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#app.base.routes.unauthorized_handler" title="Lien permanent vers cette définition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt id="app.base.routes.userprofileform">
+<code class="sig-name descname"><span class="pre">userprofileform</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">username</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#app.base.routes.userprofileform" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Mise à jour des information générale du profil de l’utilisateur connecté</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>username (str)</strong> - le nom d’utilisateur de session connécté</p>
+</dd>
+<dt class="field-even">Return</dt>
+<dd class="field-even"><p>Profil mis à jour</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="module-app.base.util">
+<span id="app-base-util-module"></span><h2>app.base.util module<a class="headerlink" href="#module-app.base.util" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Copyright (c) 2019 - present AppSeed.us</p>
+<dl class="py function">
+<dt id="app.base.util.hash_pass">
+<code class="sig-name descname"><span class="pre">hash_pass</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">password</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#app.base.util.hash_pass" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Hash a password for storing.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="app.base.util.verify_pass">
+<code class="sig-name descname"><span class="pre">verify_pass</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">provided_password</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">stored_password</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#app.base.util.verify_pass" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Verify a stored password against one provided by user</p>
+</dd></dl>
+
+</div>
+<div class="section" id="module-app.base">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-app.base" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Copyright (c) 2019 - present AppSeed.us</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2021, amani mhadhbi.
+
+    </p>
+  </div>
+    
+    
+    
+    Compilé avec <a href="https://www.sphinx-doc.org/">Sphinx</a> en utilisant un
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">thème</a>
+    
+    fourni par <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

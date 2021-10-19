@@ -1,0 +1,368 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="fr" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>base.forms module &mdash; Documentation LinkedInRecSys 0.9.0</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/translations.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Recherche" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> LinkedInRecSys
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.9.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Rechercher docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="Guide_Install.html">Guide D’installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api_param.html">Paramétres de L’API LinkedIn</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api_param.html#parametres-configparser">Paramétres ConfigParser</a></li>
+<li class="toctree-l1"><a class="reference internal" href="base.Local_functions.html">Scraping Function</a></li>
+<li class="toctree-l1"><a class="reference internal" href="base.routes.html">Dashbord</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">LinkedInRecSys</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>base.forms module</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/rst/base.forms.rst.txt" rel="nofollow"> Afficher la source de la page</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-base.forms">
+<span id="base-forms-module"></span><h1>base.forms module<a class="headerlink" href="#module-base.forms" title="Lien permanent vers ce titre">¶</a></h1>
+<p>Copyright (c) 2019 - present AppSeed.us</p>
+<dl class="py class">
+<dt id="base.forms.CreateAccountForm">
+<em class="property"><span class="pre">class</span> </em><code class="sig-name descname"><span class="pre">CreateAccountForm</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#base.forms.CreateAccountForm" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Bases : <code class="xref py py-class docutils literal notranslate"><span class="pre">flask_wtf.form.FlaskForm</span></code></p>
+<dl class="py attribute">
+<dt id="base.forms.CreateAccountForm.email">
+<code class="sig-name descname"><span class="pre">email</span></code><em class="property"> <span class="pre">=</span> <span class="pre">&lt;UnboundField(TextField,</span> <span class="pre">('Email',),</span> <span class="pre">{'id':</span> <span class="pre">'email_create',</span> <span class="pre">'validators':</span> <span class="pre">[&lt;wtforms.validators.DataRequired</span> <span class="pre">object&gt;,</span> <span class="pre">&lt;wtforms.validators.Email</span> <span class="pre">object&gt;]})&gt;</span></em><a class="headerlink" href="#base.forms.CreateAccountForm.email" title="Lien permanent vers cette définition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="base.forms.CreateAccountForm.password">
+<code class="sig-name descname"><span class="pre">password</span></code><em class="property"> <span class="pre">=</span> <span class="pre">&lt;UnboundField(PasswordField,</span> <span class="pre">('Password',),</span> <span class="pre">{'id':</span> <span class="pre">'pwd_create',</span> <span class="pre">'validators':</span> <span class="pre">[&lt;wtforms.validators.DataRequired</span> <span class="pre">object&gt;]})&gt;</span></em><a class="headerlink" href="#base.forms.CreateAccountForm.password" title="Lien permanent vers cette définition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="base.forms.CreateAccountForm.pic">
+<code class="sig-name descname"><span class="pre">pic</span></code><em class="property"> <span class="pre">=</span> <span class="pre">&lt;UnboundField(TextField,</span> <span class="pre">('image',),</span> <span class="pre">{'id':</span> <span class="pre">'image_create',</span> <span class="pre">'validators':</span> <span class="pre">[&lt;wtforms.validators.DataRequired</span> <span class="pre">object&gt;]})&gt;</span></em><a class="headerlink" href="#base.forms.CreateAccountForm.pic" title="Lien permanent vers cette définition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="base.forms.CreateAccountForm.poste">
+<code class="sig-name descname"><span class="pre">poste</span></code><em class="property"> <span class="pre">=</span> <span class="pre">&lt;UnboundField(SelectField,</span> <span class="pre">('poste',),</span> <span class="pre">{'id':</span> <span class="pre">'poste_create',</span> <span class="pre">'choices':</span> <span class="pre">[('admin',</span> <span class="pre">'Administrateur'),</span> <span class="pre">('Talaq',</span> <span class="pre">'Talent</span> <span class="pre">acquisition')]})&gt;</span></em><a class="headerlink" href="#base.forms.CreateAccountForm.poste" title="Lien permanent vers cette définition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="base.forms.CreateAccountForm.remember">
+<code class="sig-name descname"><span class="pre">remember</span></code><em class="property"> <span class="pre">=</span> <span class="pre">&lt;UnboundField(BooleanField,</span> <span class="pre">('Remember</span> <span class="pre">Me',),</span> <span class="pre">{})&gt;</span></em><a class="headerlink" href="#base.forms.CreateAccountForm.remember" title="Lien permanent vers cette définition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="base.forms.CreateAccountForm.submit">
+<code class="sig-name descname"><span class="pre">submit</span></code><em class="property"> <span class="pre">=</span> <span class="pre">&lt;UnboundField(SubmitField,</span> <span class="pre">('Login',),</span> <span class="pre">{})&gt;</span></em><a class="headerlink" href="#base.forms.CreateAccountForm.submit" title="Lien permanent vers cette définition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="base.forms.CreateAccountForm.username">
+<code class="sig-name descname"><span class="pre">username</span></code><em class="property"> <span class="pre">=</span> <span class="pre">&lt;UnboundField(TextField,</span> <span class="pre">('Username',),</span> <span class="pre">{'id':</span> <span class="pre">'username_create',</span> <span class="pre">'validators':</span> <span class="pre">[&lt;wtforms.validators.DataRequired</span> <span class="pre">object&gt;,</span> <span class="pre">&lt;wtforms.validators.Length</span> <span class="pre">object&gt;]})&gt;</span></em><a class="headerlink" href="#base.forms.CreateAccountForm.username" title="Lien permanent vers cette définition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="base.forms.CreateAccountForm.validate_email">
+<code class="sig-name descname"><span class="pre">validate_email</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">email</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#base.forms.CreateAccountForm.validate_email" title="Lien permanent vers cette définition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="base.forms.CreateAccountForm.validate_username">
+<code class="sig-name descname"><span class="pre">validate_username</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">username</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#base.forms.CreateAccountForm.validate_username" title="Lien permanent vers cette définition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="base.forms.LoginForm">
+<em class="property"><span class="pre">class</span> </em><code class="sig-name descname"><span class="pre">LoginForm</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#base.forms.LoginForm" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Bases : <code class="xref py py-class docutils literal notranslate"><span class="pre">flask_wtf.form.FlaskForm</span></code></p>
+<dl class="py attribute">
+<dt id="base.forms.LoginForm.password">
+<code class="sig-name descname"><span class="pre">password</span></code><em class="property"> <span class="pre">=</span> <span class="pre">&lt;UnboundField(PasswordField,</span> <span class="pre">('Password',),</span> <span class="pre">{'id':</span> <span class="pre">'pwd_login'})&gt;</span></em><a class="headerlink" href="#base.forms.LoginForm.password" title="Lien permanent vers cette définition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="base.forms.LoginForm.username">
+<code class="sig-name descname"><span class="pre">username</span></code><em class="property"> <span class="pre">=</span> <span class="pre">&lt;UnboundField(TextField,</span> <span class="pre">('Username',),</span> <span class="pre">{'id':</span> <span class="pre">'username_login'})&gt;</span></em><a class="headerlink" href="#base.forms.LoginForm.username" title="Lien permanent vers cette définition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="base.forms.RequestResetForm">
+<em class="property"><span class="pre">class</span> </em><code class="sig-name descname"><span class="pre">RequestResetForm</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#base.forms.RequestResetForm" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Bases : <code class="xref py py-class docutils literal notranslate"><span class="pre">flask_wtf.form.FlaskForm</span></code></p>
+<dl class="py attribute">
+<dt id="base.forms.RequestResetForm.email">
+<code class="sig-name descname"><span class="pre">email</span></code><em class="property"> <span class="pre">=</span> <span class="pre">&lt;UnboundField(StringField,</span> <span class="pre">('Email',),</span> <span class="pre">{'validators':</span> <span class="pre">[&lt;wtforms.validators.DataRequired</span> <span class="pre">object&gt;,</span> <span class="pre">&lt;wtforms.validators.Email</span> <span class="pre">object&gt;]})&gt;</span></em><a class="headerlink" href="#base.forms.RequestResetForm.email" title="Lien permanent vers cette définition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="base.forms.RequestResetForm.submit">
+<code class="sig-name descname"><span class="pre">submit</span></code><em class="property"> <span class="pre">=</span> <span class="pre">&lt;UnboundField(SubmitField,</span> <span class="pre">('</span> <span class="pre">Réinitialiser</span> <span class="pre">',),</span> <span class="pre">{})&gt;</span></em><a class="headerlink" href="#base.forms.RequestResetForm.submit" title="Lien permanent vers cette définition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="base.forms.RequestResetForm.validate_email">
+<code class="sig-name descname"><span class="pre">validate_email</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">email</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#base.forms.RequestResetForm.validate_email" title="Lien permanent vers cette définition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="base.forms.ResetPasswordForm">
+<em class="property"><span class="pre">class</span> </em><code class="sig-name descname"><span class="pre">ResetPasswordForm</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#base.forms.ResetPasswordForm" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Bases : <code class="xref py py-class docutils literal notranslate"><span class="pre">flask_wtf.form.FlaskForm</span></code></p>
+<dl class="py attribute">
+<dt id="base.forms.ResetPasswordForm.confirm_password">
+<code class="sig-name descname"><span class="pre">confirm_password</span></code><em class="property"> <span class="pre">=</span> <span class="pre">&lt;UnboundField(PasswordField,</span> <span class="pre">('Confirm</span> <span class="pre">Password',),</span> <span class="pre">{'validators':</span> <span class="pre">[&lt;wtforms.validators.DataRequired</span> <span class="pre">object&gt;,</span> <span class="pre">&lt;wtforms.validators.EqualTo</span> <span class="pre">object&gt;]})&gt;</span></em><a class="headerlink" href="#base.forms.ResetPasswordForm.confirm_password" title="Lien permanent vers cette définition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="base.forms.ResetPasswordForm.password">
+<code class="sig-name descname"><span class="pre">password</span></code><em class="property"> <span class="pre">=</span> <span class="pre">&lt;UnboundField(PasswordField,</span> <span class="pre">('Password',),</span> <span class="pre">{'validators':</span> <span class="pre">[&lt;wtforms.validators.DataRequired</span> <span class="pre">object&gt;]})&gt;</span></em><a class="headerlink" href="#base.forms.ResetPasswordForm.password" title="Lien permanent vers cette définition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="base.forms.ResetPasswordForm.submit">
+<code class="sig-name descname"><span class="pre">submit</span></code><em class="property"> <span class="pre">=</span> <span class="pre">&lt;UnboundField(SubmitField,</span> <span class="pre">('Reset</span> <span class="pre">Password',),</span> <span class="pre">{})&gt;</span></em><a class="headerlink" href="#base.forms.ResetPasswordForm.submit" title="Lien permanent vers cette définition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="base.forms.UpdateAccountForm">
+<em class="property"><span class="pre">class</span> </em><code class="sig-name descname"><span class="pre">UpdateAccountForm</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#base.forms.UpdateAccountForm" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Bases : <code class="xref py py-class docutils literal notranslate"><span class="pre">flask_wtf.form.FlaskForm</span></code></p>
+<dl class="py attribute">
+<dt id="base.forms.UpdateAccountForm.confirm_password">
+<code class="sig-name descname"><span class="pre">confirm_password</span></code><em class="property"> <span class="pre">=</span> <span class="pre">&lt;UnboundField(PasswordField,</span> <span class="pre">('Password',),</span> <span class="pre">{'id':</span> <span class="pre">'confirm_password',</span> <span class="pre">'validators':</span> <span class="pre">[&lt;wtforms.validators.DataRequired</span> <span class="pre">object&gt;]})&gt;</span></em><a class="headerlink" href="#base.forms.UpdateAccountForm.confirm_password" title="Lien permanent vers cette définition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="base.forms.UpdateAccountForm.current_password">
+<code class="sig-name descname"><span class="pre">current_password</span></code><em class="property"> <span class="pre">=</span> <span class="pre">&lt;UnboundField(PasswordField,</span> <span class="pre">('Password',),</span> <span class="pre">{'id':</span> <span class="pre">'current_password',</span> <span class="pre">'validators':</span> <span class="pre">[&lt;wtforms.validators.DataRequired</span> <span class="pre">object&gt;]})&gt;</span></em><a class="headerlink" href="#base.forms.UpdateAccountForm.current_password" title="Lien permanent vers cette définition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="base.forms.UpdateAccountForm.email">
+<code class="sig-name descname"><span class="pre">email</span></code><em class="property"> <span class="pre">=</span> <span class="pre">&lt;UnboundField(TextField,</span> <span class="pre">('Email',),</span> <span class="pre">{'id':</span> <span class="pre">'email_create',</span> <span class="pre">'validators':</span> <span class="pre">[&lt;wtforms.validators.DataRequired</span> <span class="pre">object&gt;,</span> <span class="pre">&lt;wtforms.validators.Email</span> <span class="pre">object&gt;]})&gt;</span></em><a class="headerlink" href="#base.forms.UpdateAccountForm.email" title="Lien permanent vers cette définition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="base.forms.UpdateAccountForm.new_password">
+<code class="sig-name descname"><span class="pre">new_password</span></code><em class="property"> <span class="pre">=</span> <span class="pre">&lt;UnboundField(PasswordField,</span> <span class="pre">('Password',),</span> <span class="pre">{'id':</span> <span class="pre">'new_password',</span> <span class="pre">'validators':</span> <span class="pre">[&lt;wtforms.validators.DataRequired</span> <span class="pre">object&gt;]})&gt;</span></em><a class="headerlink" href="#base.forms.UpdateAccountForm.new_password" title="Lien permanent vers cette définition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="base.forms.UpdateAccountForm.submit">
+<code class="sig-name descname"><span class="pre">submit</span></code><em class="property"> <span class="pre">=</span> <span class="pre">&lt;UnboundField(SubmitField,</span> <span class="pre">('Modifier',),</span> <span class="pre">{})&gt;</span></em><a class="headerlink" href="#base.forms.UpdateAccountForm.submit" title="Lien permanent vers cette définition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="base.forms.UpdateAccountForm.username">
+<code class="sig-name descname"><span class="pre">username</span></code><em class="property"> <span class="pre">=</span> <span class="pre">&lt;UnboundField(TextField,</span> <span class="pre">('Username',),</span> <span class="pre">{'id':</span> <span class="pre">'username_create',</span> <span class="pre">'validators':</span> <span class="pre">[&lt;wtforms.validators.InputRequired</span> <span class="pre">object&gt;,</span> <span class="pre">&lt;wtforms.validators.Length</span> <span class="pre">object&gt;]})&gt;</span></em><a class="headerlink" href="#base.forms.UpdateAccountForm.username" title="Lien permanent vers cette définition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="base.forms.UpdateAccountForm.validate_email">
+<code class="sig-name descname"><span class="pre">validate_email</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">email</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#base.forms.UpdateAccountForm.validate_email" title="Lien permanent vers cette définition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="base.forms.UpdateAccountForm.validate_username">
+<code class="sig-name descname"><span class="pre">validate_username</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">username</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#base.forms.UpdateAccountForm.validate_username" title="Lien permanent vers cette définition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2021, amani mhadhbi.
+
+    </p>
+  </div>
+    
+    
+    
+    Compilé avec <a href="https://www.sphinx-doc.org/">Sphinx</a> en utilisant un
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">thème</a>
+    
+    fourni par <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

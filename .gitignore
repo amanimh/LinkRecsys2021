@@ -1,0 +1,36 @@
+# byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+
+# tests and coverage
+*.pytest_cache
+.coverage
+
+# database & logs
+*.log
+
+# venv
+
+# other
+.DS_Store
+.idea
+
+# sphinx docs 
+_build
+_static
+_templates
+
+# javascript
+package-lock.json
+.vscode/symbols.json
+
+#Linkedin_app
+*.DS_Store
+app/__pycache__/
+
+CHANGELOG.md
+LICENSE.md
+
+package.json
+Procfile
+media

@@ -1,0 +1,649 @@
+{% extends "layouts/base.html" %}
+
+{% block title %} Tableau de bord {% endblock %}
+
+<!-- Specific Page CSS goes HERE  -->
+{% block stylesheets %}{% endblock stylesheets %}
+
+{% block content %}
+			
+	<div class="content">
+		<div class="panel-header bg-primary-gradient">
+			<div class="page-inner py-5">
+				<div class="d-flex align-items-left align-items-md-center flex-column flex-md-row">
+					<div>
+						<h2 class="text-white pb-2 fw-bold">Tableau de bord</h2>
+						<h5 class="text-white op-7 mb-2">Système de recommendation des talents</h5>
+					</div>
+					<div class="ml-md-auto py-2 py-md-0">
+						<!-- <a href="#" class="btn btn-white btn-border btn-round mr-2">Manage</a>
+						<a href="#" class="btn btn-secondary btn-round">Add Customer</a> -->
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="page-inner mt--5">
+			<div class="row mt--2">
+				<div class="col-md-6">
+					<div class="card full-height">
+						<div class="card-body">
+							<div class="card-title">Statistiques globales</div>
+							<div class="card-category">Informations quotidiennes sur les statistiques dans le système</div>
+							<div class="d-flex flex-wrap justify-content-around pb-2 pt-4">
+								<div class="px-2 pb-2 pb-md-0 text-center">
+									<div id="circles-1"></div>
+									<h6 class="fw-bold mt-3 mb-0"> Total Profils</h6>
+								</div>
+								<div class="px-2 pb-2 pb-md-4 text-center">
+									<div id="circles-2"></div>
+									<h6 class="fw-bold mt-0 mb-0">Total Compétences</h6>
+								</div>
+								<div class="px-2 pb-2 pb-md-0 text-center">
+									<div id="circles-3"></div>
+									<h6 class="fw-bold mt-3 mb-0">Total Secteurs</h6>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="card full-height">
+						<div class="card-body">
+							<div class="card-title">Profils et années d'expérience</div>
+							<div class="row py-3">
+								<div class="col-md-4 d-flex flex-column justify-content-around">
+									<div>
+										<h6 class="fw-bold text-uppercase text-success op-8">                                </h6>
+										<h3 class="fw-bold">                                     </h3>
+									</div>
+									<div>
+										<h6 class="fw-bold text-uppercase text-danger op-8">                                      </h6>
+										<h3 class="fw-bold">                                      </h3>
+									</div>
+								</div>
+								<div class="col-md-8">
+									<div id="chart-container">
+										<canvas id="totalIncomeChart"></canvas>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-12">
+					<div class="card">
+						<div class="card-header">
+							<div class="card-head-row">
+								<div class="card-title">Profils et mots clés</div>
+								<div class="card-tools">
+									<a href="#" class="btn btn-info btn-border btn-round btn-sm mr-2">
+										<span class="btn-label">
+											<i class="fa fa-pencil"></i>
+										</span>
+										Export
+									</a>
+									<a href="#" class="btn btn-info btn-border btn-round btn-sm">
+										<span class="btn-label">
+											<i class="fa fa-print"></i>
+										</span>
+										Print
+									</a>
+								</div>
+
+							</div>
+						</div>
+						<div class="card-body">
+							<div class="chart-container" style="min-height: 375px">
+								<canvas id="barChart"></canvas>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				</div>
+			</div>
+			<div class="row row-card-no-pd">
+				<div class="col-md-12">
+					<div class="card">
+						<div class="card-header">
+							<div class="card-head-row card-tools-still-right">
+								<h4 class="card-title">Géolocalisation des profils</h4>
+								<div class="card-tools">
+									<button class="btn btn-icon btn-link btn-primary btn-xs"><span class="fa fa-angle-down"></span></button>
+									<button class="btn btn-icon btn-link btn-primary btn-xs btn-refresh-card"><span class="fa fa-sync-alt"></span></button>
+									<button class="btn btn-icon btn-link btn-primary btn-xs"><span class="fa fa-times"></span></button>
+								</div>
+							</div>
+							<p class="card-category">
+							Carte de la répartition des profils dans le monde</p>
+						</div>
+						<div class="card-body">
+							<div class="row">
+								<div class="col-md-6">
+									<div class="table-responsive table-hover table-sales">
+										<table class="table">
+											<tbody>
+												<tr>
+													<td>
+														<div class="flag">
+															<img src="/static/assets/img/flags/de.png" alt="indonesia">
+														</div>
+													</td>
+													<td>Germany</td>
+
+												</tr>
+												<tr>
+													<td>
+														<div class="flag">
+															<img src="/static/assets/img/flags/us.png" alt="united states">
+														</div>
+													</td>
+													<td>USA</td>
+
+												</tr>
+												<tr>
+													<td>
+														<div class="flag">
+															<img src="/static/assets/img/flags/in.png" alt="australia">
+														</div>
+													</td>
+													<td>India</td>
+
+												</tr>
+												<tr>
+													<td>
+														<div class="flag">
+															<img src="/static/assets/img/flags/eg.png" alt="russia">
+														</div>
+													</td>
+													<td>Egypt</td>
+
+												</tr>
+												<tr>
+													<td>
+														<div class="flag">
+															<img src="/static/assets/img/flags/tn.png" alt="china">
+														</div>
+													</td>
+													<td>Tunisie</td>
+
+												</tr>
+												<tr>
+													<td>
+														<div class="flag">
+															<img src="/static/assets/img/flags/fr.png" alt="brazil">
+														</div>
+													</td>
+													<td>France</td>
+
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="mapcontainer">
+										<div id="map-example" class="vmap"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-6">
+					<div class="card">
+						<div class="card-header">
+							<div class="card-title">TOP 10 ecoles</div>
+						</div>
+						<div class="card-body">
+							<div class="chart-container">
+								<canvas id="pieChart" style="width: 50%; height: 50%"></canvas>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="card">
+						<div class="card-header">
+							<div class="card-title">TOP 10 compétences</div>
+						</div>
+						<div class="card-body">
+							<div class="chart-container">
+								<canvas id="doughnutChart" style="width: 50%; height: 50%"></canvas>
+
+							</div>
+
+						</div>
+					</div>
+				</div>
+
+			</div>
+			<div class="row">
+
+				<!--<div class="col-md-6">
+					<div class="card">
+						<div class="card-body">
+							<div class="card-title fw-mediumbold">Suggested People</div>
+							<div class="card-list">
+								<div class="item-list">
+									<div class="avatar">
+										<img src="/static/assets/img/jm_denis.jpg" alt="..." class="avatar-img rounded-circle">
+									</div>
+									<div class="info-user ml-3">
+										<div class="username">Jimmy Denis</div>
+										<div class="status">Graphic Designer</div>
+									</div>
+									<button class="btn btn-icon btn-primary btn-round btn-xs">
+										<i class="fa fa-plus"></i>
+									</button>
+								</div>
+								<div class="item-list">
+									<div class="avatar">
+										<img src="/static/assets/img/chadengle.jpg" alt="..." class="avatar-img rounded-circle">
+									</div>
+									<div class="info-user ml-3">
+										<div class="username">Chad</div>
+										<div class="status">CEO Zeleaf</div>
+									</div>
+									<button class="btn btn-icon btn-primary btn-round btn-xs">
+										<i class="fa fa-plus"></i>
+									</button>
+								</div>
+								<div class="item-list">
+									<div class="avatar">
+										<img src="/static/assets/img/talha.jpg" alt="..." class="avatar-img rounded-circle">
+									</div>
+									<div class="info-user ml-3">
+										<div class="username">Talha</div>
+										<div class="status">Front End Designer</div>
+									</div>
+									<button class="btn btn-icon btn-primary btn-round btn-xs">
+										<i class="fa fa-plus"></i>
+									</button>
+								</div>
+								<div class="item-list">
+									<div class="avatar">
+										<img src="/static/assets/img/mlane.jpg" alt="..." class="avatar-img rounded-circle">
+									</div>
+									<div class="info-user ml-3">
+										<div class="username">John Doe</div>
+										<div class="status">Back End Developer</div>
+									</div>
+									<button class="btn btn-icon btn-primary btn-round btn-xs">
+										<i class="fa fa-plus"></i>
+									</button>
+								</div>
+								<div class="item-list">
+									<div class="avatar">
+										<img src="/static/assets/img/talha.jpg" alt="..." class="avatar-img rounded-circle">
+									</div>
+									<div class="info-user ml-3">
+										<div class="username">Talha</div>
+										<div class="status">Front End Designer</div>
+									</div>
+									<button class="btn btn-icon btn-primary btn-round btn-xs">
+								Géolocalisation des Profils
+		<i class="fa fa-plus"></i>
+									</button>
+								</div>
+								<div class="item-list">
+									<div class="avatar">
+										<img src="/static/assets/img/jm_denis.jpg" alt="..." class="avatar-img rounded-circle">
+									</div>
+									<div class="info-user ml-3">
+										<div class="username">Jimmy Denis</div>
+										<div class="status">Graphic Designer</div>
+									</div>
+									<button class="btn btn-icon btn-primary btn-round btn-xs">
+										<i class="fa fa-plus"></i>
+									</button>
+								</div>
+							</div>
+						</div>
+					</div>-->
+
+				<div class="col-md-6">
+					<div class="card">
+						<div class="card-header">
+							<div class="card-title">TOP 5 secteurs</div>
+						</div>
+						<div class="card-body">
+							<div class="chart-container">
+								<canvas id="radarChart"></canvas>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!--<div class="col-md-6">
+					<div class="card card-primary bg-primary-gradient">
+						<div class="card-body">
+
+							<h4 class="mt-3 b-b1 pb-2 mb-4 fw-bold">                         </h4>
+							<h1 class="mb-4 fw-bold">                                        </h1>
+							<h4 class="mt-3 b-b1 pb-2 mb-5 fw-bold">                          </h4>
+							<div id="activeUsersChart"></div>
+							<h4 class="mt-5 pb-3 mb-0 fw-bold">                               </h4>
+							<ul class="list-unstyled">
+								<li class="d-flex justify-content-between pb-1 pt-1"><small>                           </small> <span>       </span></li>
+								<li class="d-flex justify-content-between pb-1 pt-1"><small>                           </small> <span>        </span></li>
+							</ul>
+						</div>
+					</div>
+				</div> -->
+			</div>
+		</div>
+	</div>
+
+{% endblock content %}
+
+<!-- Specific Page JS goes HERE  -->
+{% block javascripts %}
+
+	<!-- Atlantis DEMO methods, don't include it in your project! -->
+	<script src="/static/assets/js/setting-demo.js"></script>
+	<script src="/static/assets/js/demo.js"></script>
+
+
+	<script>
+	    var getData=$.get('/Chart/TotalProfil')
+        getData.done(function(json_str){
+		Circles.create({
+			id:'circles-1',
+			radius:45,
+			value:60,
+			maxValue:100,
+			width:7,
+			text: 5000,
+			colors:['#f1f1f1', '#FF9E27'],
+			duration:400,
+			wrpClass:'circles-wrp',
+			textClass:'circles-text',
+			styleWrapper:true,
+			styleText:true
+		})
+		})
+		var getData=$.get('/Chart/TotalProfil')
+        getData.done(function(skiljson){
+		Circles.create({
+			id:'circles-2',
+			radius:60,
+			value:70,
+			maxValue:100,
+			width:7,
+			text: 9715,
+			colors:['#f1f1f1', '#2BB930'],
+			duration:4000,
+			wrpClass:'circles-wrp',
+			textClass:'circles-text',
+			styleWrapper:true,
+			styleText:true
+		})
+	    })
+        var getData=$.get('/Chart/TotalProfil')
+        getData.done(function(sectjson){
+		Circles.create({
+			id:'circles-3',
+			radius:45,
+			value:40,
+			maxValue:100,
+			width:7,
+			text: 500,
+			colors:['#f1f1f1', '#F25961'],
+			duration:400,
+			wrpClass:'circles-wrp',
+			textClass:'circles-text',
+			styleWrapper:true,
+			styleText:true
+		})
+		})
+
+
+
+
+
+     	var barChart = document.getElementById('barChart').getContext('2d'),
+	    getData=$.get('/Chart/profil_motcle')
+        getData.done(function(data,keywordjson){
+		var myBarChart = new Chart(barChart, {
+			type: 'bar',
+			data: {
+                 labels : ['Cloud','Java','Web','Data_Science','SAP', 'BI'] ,
+                    datasets : [{
+					label: "Nombre des Profils",
+					backgroundColor: 'rgb(23, 125, 255)',
+					borderColor: 'rgb(23, 125, 255)',
+					data: [1156, 1039, 812, 780, 751,462] ,
+
+				}],
+			},
+			options: {
+				responsive: true,
+				maintainAspectRatio: false,
+				scales: {
+					yAxes: [{
+						ticks: {
+							beginAtZero:true
+						}
+					}]
+				},
+				 scaleShowValues: true,
+				  scales: {
+					xAxes: [{
+					  ticks: {
+						autoSkip: false
+					  }
+					}]
+				  }
+			},
+
+		})
+
+
+        })
+
+
+
+
+
+		var totalIncomeChart = document.getElementById('totalIncomeChart').getContext('2d');
+
+
+        var getData=$.get('/Chart/profil_anneexp')
+        getData.done(function(L){
+		var mytotalIncomeChart = new Chart(totalIncomeChart, {
+			type: 'bar',
+			data: {
+				labels:  [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25] ,
+				datasets : [{
+					label: "Nombre des Profils",
+					backgroundColor: '#ff9e27',
+					borderColor: 'rgb(23, 125, 255)',
+					data: L.L,
+				}],
+			},
+			options: {
+				responsive: true,
+				maintainAspectRatio: true,
+				legend: {
+					display: false,
+				},
+				scales: {
+					yAxes: [{
+						ticks: {
+							display: true //this will remove only the label
+						},
+						gridLines : {
+							drawBorder: true,
+							display : false
+						}
+					}],
+					xAxes : [ {
+						gridLines : {
+							drawBorder: false,
+							display : false
+						}
+					}]
+				},
+			}
+		})
+		})
+
+
+
+
+         var pieChart = document.getElementById('pieChart').getContext('2d');
+		 var getData=$.get('/Chart/profil_ecole')
+        getData.done(function(json_Perlistecole,json_Labellistecole){
+
+		var myPieChart = new Chart(pieChart,{
+			type: 'pie',
+
+			data: {
+				datasets: [{
+
+					data:  JSON.parse(json_Perlistecole.json_Perlistecole),
+
+					backgroundColor :["#1d7af3","#f3545d","#fdaf4b","#ff9999","#66b3ff","#99ff99","#ffcc99","cyan","#fdaf4b","#ff9999"],
+					borderWidth: 0,
+					 showInLegend: true,
+
+				}],
+				  labels: [" ESPRIT", 'HEC Paris', 'INSEAD', 'Université Paris Dauphine', 'Conservatoire National des Arts et Métiers', 'EISTI', 'ESCP Europe', 'NEOMA Business School', 'ESSEC Business School', 'emlyon business school', 'Other'],
+				  		},
+
+			options: {
+				responsive: true,
+				legend: {
+				  position: 'bottom'
+				},
+				plugins: {
+			  		datalabels: {
+					color: '#fff',
+					anchor: 'end',
+					align: 'start',
+					offset: -10,
+					borderWidth: 2,
+					borderColor: '#fff',
+					borderRadius: 25,
+					}
+			  	}
+			}
+
+		})
+        });
+
+
+         var doughnutChart = document.getElementById('doughnutChart').getContext('2d');
+
+         var getData=$.get('/Chart/profil_skills')
+        getData.done(function(json_skillper){
+		var myDoughnutChart = new Chart(doughnutChart, {
+			type: 'pie',
+			data: {
+				datasets: [{
+					data: JSON.parse(json_skillper.json_skillper),
+
+ 				   backgroundColor: [
+   	     		"#4b77a9",
+       			 "#5f255f",
+    			    "#d21243",
+    	   		 "#B27200",
+    	   		 "#1d7af3","#f3545d","#fdaf4b","#ff9999","#66b3ff","#99ff99","#ffcc99"
+  				  ],
+   				 borderColor: "#fff"
+
+				}],
+
+			   labels: ["Management", "SQL", "Project Management", "Gestion de projet", "Microsoft Office", "Business Strategy", "Leadership", "Business Development", "Cloud Computing", "Strategy", "Other"],
+				},
+			options: {
+				responsive: true,
+				legend: {
+				  position: 'bottom'
+				},
+				plugins: {
+			  		datalabels: {
+					color: '#fff',
+					anchor: 'end',
+					align: 'start',
+					offset: -10,
+					borderWidth: 2,
+					borderColor: '#fff',
+					borderRadius: 25,
+					backgroundColor: (context) => {
+					  return context.dataset.backgroundColor;
+					},
+					font: {
+					  weight: 'bold',
+					  size: '10'
+					},
+					formatter: (value) => {
+					  return value + "%";
+					}
+					}
+			  	}
+			}
+		})
+		});
+
+
+
+         var radarChart = document.getElementById('radarChart').getContext('2d');
+
+		 var getData=$.get('/Chart/Sc_Industries')
+        getData.done(function(json_listesecteur){
+		var myRadarChart = new Chart(radarChart, {
+			type: 'doughnut',
+			data: {
+				labels: ['Information Technology and Services','Computer Software','Management Consulting','Financial Services','Other'],
+
+				datasets: [{
+					data: JSON.parse(json_listesecteur.json_listesecteur),
+					borderColor: '#1d7af3',
+					backgroundColor : 'rgba(29, 122, 243, 0.25)',
+					pointBackgroundColor: "#1d7af3",
+					pointHoverRadius: 4,
+					pointRadius: 3,
+					label: 'Team 1'
+				},
+				]
+			},
+			options: {
+				responsive: true,
+				legend: {
+				  position: 'bottom'
+				},
+				plugins: {
+
+
+					formatter: (value) => {
+					  return value + '%';
+					}
+
+			  	}
+			}
+		})
+		});
+
+
+
+
+		$('#lineChart').sparkline([105,103,123,100,95,105,115], {
+			type: 'line',
+			height: '70',
+			width: '100%',
+			lineWidth: '2',
+			lineColor: '#ffa534',
+			fillColor: 'rgba(255, 165, 52, .14)'
+		});
+
+
+
+
+	</script>
+
+{% endblock javascripts %}

@@ -1,0 +1,121 @@
+		<!-- Sidebar -->
+		<div class="sidebar sidebar-style-2" data-background-color="bg1">
+			<div class="sidebar-wrapper scrollbar scrollbar-inner">
+				<div class="sidebar-content">
+				{% if current_user.is_authenticated %}
+					<div class="user">
+						<div class="avatar-sm float-left mr-2">
+							<img src="/static/assets/img/avatar.png" alt="..." class="avatar-img rounded-circle">
+						</div>
+						<div class="info">
+							<a data-toggle="collapse" href="#collapseExample" aria-expanded="true">
+								<span>
+									{{ current_user.username }}
+									<span class="user-level">
+										{{ current_user.email }}
+									</span>
+									<span class="caret"></span>
+								</span>
+							</a>
+							<div class="clearfix"></div>
+
+							<div class="collapse in" id="collapseExample">
+								<ul class="nav">
+									<li>
+										<a href="#profile">
+											<span class="link-collapse">Mon Profil</span>
+										</a>
+									</li>
+									<li>
+										<a href="{{ url_for('base_blueprint.logout') }}">
+											<span class="link-collapse">Se déconnecter</span>
+										</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<ul class="nav nav-primary">
+						<li class="nav-item ">
+							<a data-toggle="collapse" href="#dashboard" class="collapsed" aria-expanded="false">
+								<i class="fas fa-home"></i>
+								<p>Tableau de bord</p>
+								<span class="caret"></span>
+							</a>
+							<div class="collapse" id="dashboard">
+								<ul class="nav nav-collapse">
+									<li>
+										<a href="/index.html">
+											<span class="sub-item">Tableau de bord</span>
+										</a>
+									</li>
+									<li>
+										<a href="/Chart.html">
+											<span class="sub-item">Analyse de LinkedIn</span>
+										</a>
+									</li>
+								</ul>
+							</div>
+						</li>
+
+
+
+
+						<li class="nav-section">
+							<span class="sidebar-mini-icon">
+								<i class="fa fa-ellipsis-h"></i>
+							</span>
+							<h4 class="text-section">Composents</h4>
+						</li>
+
+
+
+
+						<li class="nav-item">
+							<a data-toggle="collapse" href="#base">
+								<i class="fas fa-layer-group"></i>
+								<p>Informations Profils</p>
+								<span class="caret"></span>
+							</a>
+							<div class="collapse" id="base">
+								<ul class="nav nav-collapse">
+									<li>
+										<a href="/DisplayProfiltab">
+											<span class="sub-item">Profils</span>
+										</a>
+									</li>
+
+								</ul>
+							</div>
+
+						</li>
+
+
+						<li class="nav-item">
+   <a data-toggle="collapse" href="#base1">
+      <i class="fas fa-briefcase"></i>
+      <p>Offre d'emploi</p>
+      <span class="caret"></span>
+   </a>
+   <div class="collapse" id="base1">
+      <ul class="nav nav-collapse">
+         <li>
+            <a href="/recommendation">
+               <span class="sub-item">Publier une offre</span>
+            </a>
+         </li>
+
+      </ul>
+   </div>
+
+</li>
+
+
+
+					</ul>
+				{% endif %}	
+				</div>
+			</div>
+		</div>
+        <!-- End Sidebar -->
+        

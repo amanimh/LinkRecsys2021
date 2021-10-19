@@ -1,0 +1,97 @@
+{% extends "layouts/base.html" %}
+
+{% block title %} Login {% endblock %}
+
+<!-- Specific Page CSS goes HERE  -->
+{% block stylesheets %}{% endblock stylesheets %}
+
+{% block content %}
+
+<div class="page-inner">
+    <div class="page-header">
+        <h4 class="page-title">Rénitialisation mot de passe</h4>
+        <ul class="breadcrumbs">
+            <li class="nav-home">
+                <a href="#">
+                    <i class="flaticon-home"></i>
+                </a>
+            </li>
+            <li class="separator">
+                <i class="flaticon-right-arrow"></i>
+            </li>
+            <li class="nav-item">
+                <a href="#">Authentication</a>
+            </li>
+            <li class="separator">
+                <i class="flaticon-right-arrow"></i>
+            </li>
+            <li class="nav-item">
+                <a href="#">Rénitialisation mot de passe</a>
+            </li>
+        </ul>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card">
+                <div class="card-header">
+                    <div class="card-title">
+                        {% if msg %}
+                            <span class="text-danger">{{ msg | safe }}</span>
+                        {% else %}
+                        <span>
+                         Réinitialiser votre mot de passe
+                        </span>
+
+                        {% endif %}
+                    </div>
+                </div>
+
+                <form method="post" action="">
+
+                    {{ form.hidden_tag() }}
+
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-6 col-lg-4">
+
+                                <div class="form-group">
+                                        <div class="input-group mb-3">
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text">
+                                                    <i class="icon-envelope"></i>
+                                                </span>
+                                            </div>
+                                            {{ form.password(placeholder="mot de passe ",class="form-control form-control-lg") }}
+                                        </div>
+                                </div>
+
+
+                                <div class="form-group">
+                                        <div class="input-group mb-3">
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text">
+                                                    <i class="icon-envelope"></i>
+                                                </span>
+                                            </div>
+                                            {{ form.confirm_password(placeholder="confirmer le mot de passe ",class="form-control form-control-lg") }}
+                                        </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-action">
+                        <button type="submit" name="login" class="btn btn-success">Rénitialiser</button>
+                        &nbsp; &nbsp;
+                    </div>
+
+                </form>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock content %}
+
+<!-- Specific Page JS goes HERE  -->
+{% block javascripts %}{% endblock javascripts %}

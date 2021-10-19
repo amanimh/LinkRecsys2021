@@ -1,0 +1,347 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="fr" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Paramétres de L’API LinkedIn &mdash; Documentation LinkedInRecSys 0.9.0</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/translations.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Recherche" href="../search.html" />
+    <link rel="next" title="Scraping Function" href="base.Local_functions.html" />
+    <link rel="prev" title="Guide D’installation" href="Guide_Install.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> LinkedInRecSys
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.9.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Rechercher docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="Guide_Install.html">Guide D’installation</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Paramétres de L’API LinkedIn</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#table-profil">Table Profil</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#table-langues">Table Langues</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#table-societe">Table Societe</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#table-skills">Table Skills</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#table-formation">Table Formation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#table-experience">Table Experience</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#table-certifications">Table Certifications</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="#parametres-configparser">Paramétres ConfigParser</a></li>
+<li class="toctree-l1"><a class="reference internal" href="base.Local_functions.html">Scraping Function</a></li>
+<li class="toctree-l1"><a class="reference internal" href="base.routes.html">Dashbord</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">LinkedInRecSys</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Paramétres de L’API LinkedIn</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/rst/api_param.rst.txt" rel="nofollow"> Afficher la source de la page</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="parametres-de-l-api-linkedin">
+<h1>Paramétres de L’API LinkedIn<a class="headerlink" href="#parametres-de-l-api-linkedin" title="Lien permanent vers ce titre">¶</a></h1>
+<div class="section" id="table-profil">
+<h2>Table Profil<a class="headerlink" href="#table-profil" title="Lien permanent vers ce titre">¶</a></h2>
+<blockquote>
+<div><ul>
+<li><p><strong>profile_id</strong> -  identifiant de profil</p></li>
+<li><p><strong>firstName</strong> -   prénom du profil LinkedIn.</p></li>
+<li><p><strong>lastName</strong> -    nom du profil</p></li>
+<li><p><strong>birthDate</strong> -   date de naissance du profil</p></li>
+<li><p><strong>phone_numbers</strong> - numéro de téléphone de profil</p></li>
+<li><p><strong>summary</strong> - une description courte et claire qui donne une idée sur le profil</p></li>
+<li><p><strong>geoCountryName</strong> -  Nom du pays</p></li>
+<li><p><strong>email_address</strong> -   adresse  email</p></li>
+<li><p><strong>followersCount</strong> -  nombre d’abonnés</p></li>
+<li><p><strong>headline</strong> - Titre de profil</p></li>
+<li><p><strong>Volunteer</strong> - vrai si le propriétaire</p></li>
+<li><p><strong>Publications</strong> - vrai si le propriétaire du profil a participer à la vie associative</p>
+<blockquote>
+<div><p>Faux si non</p>
+</div></blockquote>
+</li>
+<li><p><strong>honors</strong> -  vrai si le propriétaire du profil a pris des honneurs</p>
+<blockquote>
+<div><p>Faux si non</p>
+</div></blockquote>
+</li>
+<li><p><strong>student</strong> -  vrai si le propriétaire du profil est un étudiant</p>
+<blockquote>
+<div><p>Faux si non</p>
+</div></blockquote>
+</li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="table-langues">
+<h2>Table Langues<a class="headerlink" href="#table-langues" title="Lien permanent vers ce titre">¶</a></h2>
+<blockquote>
+<div><ul class="simple">
+<li><p><strong>profile_id</strong> -    identifiant de profil</p></li>
+<li><p><strong>name_langue</strong> -   langue</p></li>
+<li><p><strong>proficiency</strong> -   niveau de compétence</p></li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="table-societe">
+<h2>Table Societe<a class="headerlink" href="#table-societe" title="Lien permanent vers ce titre">¶</a></h2>
+<blockquote>
+<div><ul class="simple">
+<li><p><strong>companyUrn</strong> -  identifiant de l’entreprise</p></li>
+<li><p><strong>companyName</strong> -   nom de l’entreprise</p></li>
+<li><p><strong>geoLocationName</strong> -    emplacement géographique</p></li>
+<li><p><strong>industries</strong> -    secteur d’activité de l’entreprise</p></li>
+<li><p><strong>staffCount</strong> -    nombre d’employés</p></li>
+<li><p><strong>companyPageUrl</strong> -    adresse éléctronique</p></li>
+<li><p><strong>companyType</strong> -    type de l’entreprise</p></li>
+<li><p><strong>phone</strong> -    numéro du télephone</p></li>
+<li><p><strong>profile_id</strong> -    identifiant de profil</p></li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="table-skills">
+<h2>Table Skills<a class="headerlink" href="#table-skills" title="Lien permanent vers ce titre">¶</a></h2>
+<blockquote>
+<div><ul class="simple">
+<li><p><strong>standardizedSkillUrn</strong> -  identifiant de compétence</p></li>
+<li><p><strong>name_skill</strong> -   nom de la compétence</p></li>
+<li><p><strong>profile_id</strong> -    identifiant de profil</p></li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="table-formation">
+<h2>Table Formation<a class="headerlink" href="#table-formation" title="Lien permanent vers ce titre">¶</a></h2>
+<blockquote>
+<div><ul class="simple">
+<li><p><strong>entityUrn</strong> -  identifiant de l’école</p></li>
+<li><p><strong>schoolName</strong> -   nom de l’école</p></li>
+<li><p><strong>degreeName</strong> -    niveau d’études</p></li>
+<li><p><strong>fieldOfStudy</strong> -    domaine d’étude</p></li>
+<li><p><strong>Period</strong> -    Période d’étude</p></li>
+<li><p><strong>profile_id</strong> -    identifiant de profil</p></li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="table-experience">
+<h2>Table Experience<a class="headerlink" href="#table-experience" title="Lien permanent vers ce titre">¶</a></h2>
+<blockquote>
+<div><ul class="simple">
+<li><p><strong>entityUrn</strong> -  identifiant de l’éxperience</p></li>
+<li><p><strong>companyUrn</strong> -   identifiant de l’entreprise</p></li>
+<li><p><strong>Period</strong> -    Période de l’éxperience</p></li>
+<li><p><strong>title</strong> -  Poste occupé</p></li>
+<li><p><strong>profile_id</strong> -    identifiant de profil</p></li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="table-certifications">
+<h2>Table Certifications<a class="headerlink" href="#table-certifications" title="Lien permanent vers ce titre">¶</a></h2>
+<blockquote>
+<div><ul class="simple">
+<li><p><strong>authority</strong> -  L’organisation qui agit pour valider la certification</p></li>
+<li><p><strong>name_certif</strong> -   nom de certification</p></li>
+<li><p><strong>Period</strong> -    Période de validité</p></li>
+<li><p><strong>profile_id</strong> -    identifiant de profil</p></li>
+</ul>
+</div></blockquote>
+</div>
+</div>
+<div class="section" id="parametres-configparser">
+<h1>Paramétres ConfigParser<a class="headerlink" href="#parametres-configparser" title="Lien permanent vers ce titre">¶</a></h1>
+<blockquote>
+<div><ul>
+<li><p><strong>[param]</strong></p>
+<blockquote>
+<div><ul class="simple">
+<li><p><strong>usr</strong>  (str) – Nom d’utilisateur du compte LinkedIn.</p></li>
+<li><p><strong>pw</strong>  (str) - Mot de passe du compte LinkedIn.</p></li>
+</ul>
+</div></blockquote>
+</li>
+</ul>
+</div></blockquote>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="base.Local_functions.html" class="btn btn-neutral float-right" title="Scraping Function" accesskey="n" rel="next">Suivant <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="Guide_Install.html" class="btn btn-neutral float-left" title="Guide D’installation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Précédent</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2021, amani mhadhbi.
+
+    </p>
+  </div>
+    
+    
+    
+    Compilé avec <a href="https://www.sphinx-doc.org/">Sphinx</a> en utilisant un
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">thème</a>
+    
+    fourni par <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

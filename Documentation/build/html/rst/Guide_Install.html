@@ -1,0 +1,308 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="fr" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Guide D’installation &mdash; Documentation LinkedInRecSys 0.9.0</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/translations.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Recherche" href="../search.html" />
+    <link rel="next" title="Paramétres de L’API LinkedIn" href="api_param.html" />
+    <link rel="prev" title="Welcome toLinkedIn Recommender System documentation!" href="../index.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> LinkedInRecSys
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.9.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Rechercher docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Guide D’installation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#configurer-lenvironnement-virtuel">1- Configurer l’environnement virtuel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#configurer-sphinx">2- Configurer Sphinx</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#pour-executer-lapplication">3- Pour exécuter l’application</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="api_param.html">Paramétres de L’API LinkedIn</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api_param.html#parametres-configparser">Paramétres ConfigParser</a></li>
+<li class="toctree-l1"><a class="reference internal" href="base.Local_functions.html">Scraping Function</a></li>
+<li class="toctree-l1"><a class="reference internal" href="base.routes.html">Dashbord</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">LinkedInRecSys</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Guide D’installation</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/rst/Guide_Install.rst.txt" rel="nofollow"> Afficher la source de la page</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="guide-d-installation">
+<h1>Guide D’installation<a class="headerlink" href="#guide-d-installation" title="Lien permanent vers ce titre">¶</a></h1>
+<div class="section" id="configurer-lenvironnement-virtuel">
+<h2>1- Configurer l’environnement virtuel<a class="headerlink" href="#configurer-lenvironnement-virtuel" title="Lien permanent vers ce titre">¶</a></h2>
+<blockquote>
+<div><ul class="simple">
+<li><p>Dans le terminal, exécuter les commandes ci-dessous :</p></li>
+</ul>
+<p>python3 -m venv Linkedin_rec</p>
+<p>source Linkedin_rec/bin/activate</p>
+<ul class="simple">
+<li><p>Installation des bibliothèques nécessaires :</p></li>
+</ul>
+<p>pip install -r requirements.txt</p>
+</div></blockquote>
+</div>
+<div class="section" id="configurer-sphinx">
+<h2>2- Configurer Sphinx<a class="headerlink" href="#configurer-sphinx" title="Lien permanent vers ce titre">¶</a></h2>
+<blockquote>
+<div><ul>
+<li><p>ouvrir cmd et changer le chemin jusqu’à le dossier document</p></li>
+<li><p>éxecuter la commande :sphinx-quickstart (« yes » pour la premiere question)</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Le message suivant va être imprimé sur le terminal :</p></li>
+</ul>
+<div class="figure align-default">
+<img alt="../_images/sphinx.PNG" src="../_images/sphinx.PNG" />
+</div>
+<ul class="simple">
+<li><p>retrouvez avec un dossier source/ qui contiendra votre documentation, et deux fichiers : Makefile pour générer la doc depuis Linux, MacOS,… et make.bat pour générer la doc depuis Windows.</p></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p>Generate Documentation:</p>
+<blockquote>
+<div><ul class="simple">
+<li><dl class="simple">
+<dt>HTML</dt><dd><ul>
+<li><p>$ make clean</p></li>
+<li><p>$ make html</p></li>
+<li><p>$ sphinx-apidoc -o source/rst/ ../app</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</li>
+<li><p>Une fois la doc générée, vous retrouverez le résultat dans le dossier build/html/.</p>
+<blockquote>
+<div><ul class="simple">
+<li><dl class="simple">
+<dt>PDF</dt><dd><ul>
+<li><p>$ sphinx-build -b rinoh source _build/rinoh</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</li>
+<li><p>Une fois la doc générée, vous retrouverez le résultat dans le dossier _build/rinoh/….</p></li>
+</ul>
+<p>Vous pouvez à présent ouvrir index.html dans votre navigateur et voir le résultat.</p>
+</div></blockquote>
+</div>
+<div class="section" id="pour-executer-lapplication">
+<h2>3- Pour exécuter l’application<a class="headerlink" href="#pour-executer-lapplication" title="Lien permanent vers ce titre">¶</a></h2>
+<blockquote>
+<div><ul class="simple">
+<li><p>Exécuter la commande ci-dessous lorsque l’environnement virtuel est actif :</p></li>
+</ul>
+<p>python run.py</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Le message suivant doit être imprimé sur le terminal :</p></li>
+</ul>
+<div class="figure align-default">
+<img alt="../_images/run.PNG" src="../_images/run.PNG" />
+</div>
+<ul class="simple">
+<li><p>Cela indique un comportement normal. Nous devrions trouver la page d’accueil ici : <a class="reference external" href="http://127.0.0.1:5000/">http://127.0.0.1:5000/</a></p></li>
+</ul>
+</div></blockquote>
+</div></blockquote>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="api_param.html" class="btn btn-neutral float-right" title="Paramétres de L’API LinkedIn" accesskey="n" rel="next">Suivant <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="../index.html" class="btn btn-neutral float-left" title="Welcome toLinkedIn Recommender System documentation!" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Précédent</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2021, amani mhadhbi.
+
+    </p>
+  </div>
+    
+    
+    
+    Compilé avec <a href="https://www.sphinx-doc.org/">Sphinx</a> en utilisant un
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">thème</a>
+    
+    fourni par <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

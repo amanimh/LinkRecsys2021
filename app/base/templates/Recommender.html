@@ -1,0 +1,137 @@
+{% extends "layouts/base.html" %}
+
+{% block title %} Login {% endblock %}
+
+<!-- Specific Page CSS goes HERE  -->
+{% block stylesheets %}{% endblock stylesheets %}
+
+{% block content %}
+
+
+
+<div class="content">
+		<div class="page-inner">
+			<div class="page-header">
+				<h4 class="page-title">Offre d'emploi</h4>
+				<ul class="breadcrumbs">
+					<li class="nav-home">
+						<a href="#">
+							<i class="flaticon-home"></i>
+						</a>
+					</li>
+					<li class="separator">
+						<i class="flaticon-right-arrow"></i>
+					</li>
+					<li class="nav-item">
+						<a href="#">Offre d'emploi</a>
+					</li>
+					<li class="separator">
+						<i class="flaticon-right-arrow"></i>
+					</li>
+					<li class="nav-item">
+						<a href="#">Publier une offre</a>
+					</li>
+				</ul>
+			</div>
+
+			<form method="post" action="{{my_posjob}}" >
+			<div class="row">
+
+					<div class="card">
+						<div class="card-header">
+							<div class="card-title">Publiez l'offre d'emploi et consultez les candidats correspondants</div>
+						</div>
+						<div class="card-body">
+
+							<div class="row">
+								<div class="col-md-6 col-lg-4">
+									<div class="form-group">
+
+											<div class="form-group form-floating-label">
+												<input id="inputFloatingLabel" type="text" name="title" class="form-control input-border-bottom" required>
+												<label for="inputFloatingLabel"  class="placeholder"> Titre </label>
+											</div>
+
+									</div>
+
+								</div>
+								<div class="col-md-6 col-lg-4">
+									<div class="form-group">
+
+									<label class="form-label" >Description</label>
+										<textarea class="form-control" name="description"  id="comment" rows="5">
+
+										</textarea>
+									</div>
+								</div>
+								<div class="col-md-6 col-lg-4">
+									<div class="form-group">
+
+								       <label class="form-label">Etiquette </label>
+										<div class="selectgroup selectgroup-pills">
+
+											<label class="selectgroup-item">
+												<input type="checkbox" name="value" value="CSS" class="selectgroup-input">
+												<span class="selectgroup-button">#TALEND</span>
+											</label>
+											<label class="selectgroup-item">
+												<input type="checkbox" name="value" value="PHP" class="selectgroup-input">
+												<span class="selectgroup-button">#JAVA</span>
+											</label>
+											<label class="selectgroup-item">
+												<input type="checkbox" name="value" value="JavaScript" class="selectgroup-input">
+												<span class="selectgroup-button">#BI</span>
+											</label>
+											<label class="selectgroup-item">
+												<input type="checkbox" name="value" value="Ruby" class="selectgroup-input">
+												<span class="selectgroup-button">#SQL</span>
+											</label>
+											<label class="selectgroup-item">
+												<input type="checkbox" name="value" value="Ruby" class="selectgroup-input">
+												<span class="selectgroup-button">#MSBI</span>
+											</label>
+											<label class="selectgroup-item">
+												<input type="checkbox" name="value" value="C++" class="selectgroup-input">
+												<span class="selectgroup-button">#Angular</span>
+											</label>
+											<label class="selectgroup-item">
+												<input type="checkbox" name="value" value="C++" class="selectgroup-input">
+												<span class="selectgroup-button">#Docker</span>
+											</label>
+											<label class="selectgroup-item">
+												<input type="checkbox" name="value" value="C++" class="selectgroup-input">
+												<span class="selectgroup-button">#BigData</span>
+											</label>
+											<label class="selectgroup-item">
+												<input type="checkbox" name="value" value="HTML" class="selectgroup-input" checked="">
+												<span class="selectgroup-button">#SAP</span>
+											</label>
+
+										</div>
+                                    </div>
+								</div>
+							</div>
+						</div>
+						<div class="card-action">
+							<button href="{{url_for('base_blueprint.jobrecommendation')}}" class="btn btn-success">Démarrer</button>
+						</div>
+
+					</div>
+
+				</div>
+			 </form>
+			</div>
+
+		</div>
+	  </div>
+	</div>
+
+
+
+
+
+
+{% endblock content %}
+
+<!-- Specific Page JS goes HERE  -->
+{% block javascripts %}{% endblock javascripts %}

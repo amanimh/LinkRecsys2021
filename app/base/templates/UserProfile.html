@@ -1,0 +1,209 @@
+{% extends 'layouts/base.html' %}
+
+{% block title %} Profile {% endblock title %}
+
+{% block content %}
+
+    <div class="header pb-6 d-flex align-items-center"
+         style="min-height: 500px; background-image: url(/static/assets/img//img.png); background-size: cover; background-position: center top;">
+      <!-- Mask -->
+      <span class="mask bg-gradient-default opacity-8"></span>
+      <!-- Header container -->
+      <div class="container-fluid d-flex align-items-center">
+        <div class="row">
+          <div class="text-white mt-0 mb-5">
+            <h1 class="display-2 text-white">
+            </h1>
+           <!-- <p class="text-white mt-0 mb-5">Accès au compte. </p>-->
+           <!-- <a href="#!" class="btn btn-neutral">Edit profile</a> -->
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Page content -->
+    <div class="container-fluid mt--6">
+      <div class="row">
+        <div class="col-xl-4 order-xl-2">
+          <div class="card card-profile">
+              <img src="/static/assets/img/avatar.png" alt="Image placeholder" class="card-img-top">                  </a>
+
+            <div class="row justify-content-center">
+              <div class="col-lg-3 order-lg-2">
+                <div class="card-profile-image">
+                    <a href="#"></a>
+                </div>
+              </div>
+            </div>
+            <div class="card-header text-center border-0 pt-8 pt-md-4 pb-0 pb-md-4">
+
+            </div>
+            <div class="card-body pt-0">
+              <div class="row">
+                <div class="col">
+                  <div class="card-profile-stats d-flex justify-content-center">
+
+                  </div>
+                </div>
+              </div>
+              <div class="text-center">
+                <h5 class="h3">
+                  {{ current_user.username }}
+                </h5>
+                <div class="h5 font-weight-300">
+                  {{ current_user.email }}
+                </div>
+                <div class="h5 mt-4">
+                  <i class="ni business_briefcase-24 mr-2"></i>{{ current_user.poste }}
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-8 order-xl-1">
+          <div class="card">
+            <div class="card-header">
+              <div class="row align-items-center">
+                <div class="col-8">
+                  <h3 class="mb-0">Paramètres pour vous aider à sécuriser votre compte </h3>
+                </div>
+
+              </div>
+            </div>
+            <div class="card-body">
+              <form  method="POST" >
+                {{ form.hidden_tag() }}
+
+
+
+                <h6 class="heading-small text-muted mb-4"> Informations de l'utilisateur </h6>
+                 <hr class="my-4" />
+                <div class="pl-lg-4">
+                  <div class="row">
+                   <div class="form-group">
+                    {{ form.username.label(class="form-control-label") }}
+
+                      {% if form.username.errors %}
+                          {{ form.username(class="form-control form-control-lg is-invalid") }}
+                          <div class="invalid-feedback">
+                              {% for error in form.username.errors %}
+                                  <span>{{ error }}</span>
+                              {% endfor %}
+                          </div>
+                      {% else %}
+                          {{ form.username(class="form-control") }}
+                      {% endif %}
+                </div>
+                    <div class="col-lg-6">
+                      <div class="form-group">
+                        <label class="form-control-label">Email</label>
+                         {% if form.email.errors %}
+                          {{ form.email(class="form-control form-control-lg is-invalid") }}
+                          <div class="invalid-feedback">
+                              {% for error in form.email.errors %}
+                                  <span>{{ error }}</span>
+                              {% endfor %}
+                          </div>
+                         {% else %}
+                          {{ form.email(class="form-control") }}
+                         {% endif %}
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-lg-6">
+
+
+
+
+                    </div>
+                    <div class="col-lg-6">
+
+
+
+
+                    </div>
+                  </div>
+                </div>
+
+                  <hr class="my-4" />
+            <!-- Address -->
+            <h6 class="heading-small text-muted mb-4">Changer le mot de passe</h6>
+            <div class="pl-lg-4">
+                 <div class="row">
+                <div class="col-md-10">
+                  <div class="form-group">
+                    <label class="form-control-label" >Tapez votre mot de passe actuel</label>
+                     <!-- {{ form.current_password(placeholder="mot de passe actuel",class="form-control",type="password") }}-->
+
+                      {% if form.current_password.errors %}
+                          {{ form.current_password(class="form-control form-control-lg is-invalid" ) }}
+                          <div class="invalid-feedback">
+                              {% for error in form.current_password.errors %}
+                                  <span>{{ error }}</span>
+                              {% endfor %}
+                          </div>
+                      {% else %}
+                          {{ form.current_password(class="form-control" , placeholder="mot de passe actuelle") }}
+                      {% endif %}
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-10">
+                  <div class="form-group">
+                    <label class="form-control-label" >Tapez votre nouveau mot de passe</label>
+                    <!-- <input id="new_password" class="form-control" placeholder="nouveau mot de passe" value="" type="password">-->
+
+                      {% if form.new_password.errors %}
+                          {{ form.new_password(class="form-control form-control-lg is-invalid") }}
+                          <div class="invalid-feedback">
+                              {% for error in form.new_password.errors %}
+                                  <span>{{ error }}</span>
+                              {% endfor %}
+                          </div>
+                      {% else %}
+                          {{ form.new_password(class="form-control" ,placeholder=" nouveau mot de passe") }}
+                      {% endif %}
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-lg-10">
+                  <div class="form-group">
+                    <label class="form-control-label" >Confirmer votre nouveau mot de passe</label>
+                    <!--<input type="confirm_password" id="confirm_password" class="form-control" placeholder="Confirmer le nouveau mot de passe" value="">-->
+                       {% if form.confirm_password.errors %}
+                          {{ form.confirm_password(class="form-control form-control-lg is-invalid") }}
+                          <div class="invalid-feedback">
+                              {% for error in form.confirm_password.errors %}
+                                  <span>{{ error }}</span>
+                              {% endfor %}
+                          </div>
+                      {% else %}
+                          {{ form.confirm_password(class="form-control" , placeholder="Confirmer le nouveau mot de passe") }}
+                      {% endif %}
+                  </div>
+                </div>
+
+              </div>
+            </div>
+                <hr class="my-4" />
+                <!-- Description -->
+                <div class="col-12 text-right">
+                  {{ form.submit(class="btn btn-sm btn-primary float-right" ,type="submit"   ) }}
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+    </div>
+
+{% endblock content %}
+
+<!-- Specific JS goes HERE --> 
+{% block javascripts %}{% endblock javascripts %}

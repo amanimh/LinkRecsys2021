@@ -1,0 +1,73 @@
+{% extends "layouts/base.html" %}
+
+{% block title %} Widgets {% endblock %}
+
+<!-- Specific Page CSS goes HERE  -->
+{% block stylesheets %}{% endblock stylesheets %}
+
+{% block content %}
+
+	<div class="content">
+		<div class="page-inner">
+			<!-- Card -->
+
+			<h4 class="page-title">Profils recommandés</h4>
+
+				<div  class="col-md-111">
+
+
+					 {% if context %}
+  						 {% for i in context %}
+
+					<div class="card card-profile">
+						<div class="card-header" style="background-image: url('/static/assets/img/blogpost.jpg')">
+							<div class="profile-picture">
+								<div class="avatar avatar-xl">
+									<img src="/static/assets/img/avatar.png" alt="..." class="avatar-img rounded-circle">
+								</div>
+							</div>
+						</div>
+						<div class="card-body">
+							<div class="user-profile text-center">
+								<div class="name">{{i.Nom}}</div>
+								<div class="job">{{i.Prenom}}</div>
+								<div class="social-media">
+									<a class="btn btn-info btn-twitter btn-sm btn-link" href="{{i.LinkedIn_Profile}}">
+										<span class="btn-label just-icon"><i class="icon-social-linkedin"></i> </span>
+									</a>
+
+								</div>
+								<div class="view-profile">
+									<a href="#" class="btn btn-secondary btn-block">View Full Profile</a>
+								</div>
+							</div>
+						</div>
+						<div class="card-footer">
+							<div class="row user-stats text-center">
+								<div class="col">
+									<div class="number">{{i.Score}}</div>
+									<div class="title">%</div>
+								</div>
+
+
+							</div>
+						</div>
+					</div>
+					  {% endfor %}
+                      {% endif %}
+				</div>
+
+
+
+		</div>
+	</div>
+
+{% endblock content %}
+
+<!-- Specific Page JS goes HERE  -->
+{% block javascripts %}
+
+	<!-- Atlantis DEMO methods, don't include it in your project! -->
+
+
+{% endblock javascripts %}
