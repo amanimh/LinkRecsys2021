@@ -35,10 +35,5 @@ package.json
 Procfile
 media
 
-linkenv
-linkvenv
 vectorizer.pk
 final_userdf.pk
-recommendation
-mix
-jobs.db
