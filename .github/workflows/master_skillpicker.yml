@@ -60,4 +60,4 @@ jobs:
         with:
           app-name: 'SkillPicker'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_85D97750E3DA480A945DBB9566197CB9 }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_AD01A331899148ADA15A0CC429E6B6A3 }}
